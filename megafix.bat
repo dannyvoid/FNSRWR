@@ -1,7 +1,7 @@
 @echo off
-echo ================================
-echo ===== MEGAFIX by DannyVoid =====
-echo ================================
+echo ===============================
+echo === MEGAFIX v1 by DannyVoid ===
+echo ===============================
 echo.
 
 :choice
@@ -10,6 +10,7 @@ echo This will temporarily disable internet access!
 set /P c=[Y/N]
 if /I "%c%" EQU "Y" goto :continue
 if /I "%c%" EQU "N" goto :stop
+
 goto :choice
 
 :continue
