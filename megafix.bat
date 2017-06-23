@@ -39,12 +39,11 @@ netsh int ip reset >NUL
 echo Resetting Winsock...
 netsh winsock reset >NUL
 
-echo Disabling Network Adapter...
+echo Resetting Network Adapter...
 for /F "skip=3 tokens=1,2,3* delims= " %%G in ('netsh interface show interface') DO (
     IF "%%H"=="Connected" netsh interface set interface "%%J" disabled
 ) >NUL
 
-echo Enabling Network Adapter...
 for /F "skip=3 tokens=1,2,3* delims= " %%G in ('netsh interface show interface') DO (
     IF "%%H"=="Disconnected" netsh interface set interface "%%J" enabled
 ) >NUL
@@ -54,7 +53,7 @@ goto :done
 echo.
 echo Complete! Your Megadownloader should continue as normal.
 pause
-exit
+goto :stop
 
 :stop
 exit
