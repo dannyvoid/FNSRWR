@@ -10,9 +10,9 @@ MSHTA "javascript: var shell = new ActiveXObject('shell.application'); shell.She
 EXIT
 
 :start
-echo ===============================
-echo === MEGAFIX v1 by DannyVoid ===
-echo ===============================
+echo ==============================
+echo === FNSRWR v1 by DannyVoid ===
+echo ==============================
 echo.
 
 :choice
@@ -51,7 +51,7 @@ goto :done
 
 :done
 echo.
-echo Complete! Your Megadownloader should continue as normal.
+echo Complete! Your connection should continue as normal.
 pause
 goto :stop
 
