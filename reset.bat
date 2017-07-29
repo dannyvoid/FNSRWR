@@ -38,6 +38,7 @@ netsh int ip reset >NUL
 
 echo Resetting Winsock...
 netsh winsock reset >NUL
+netsh winsock reset proxy >NUL
 
 echo Resetting Network Adapter...
 for /F "skip=3 tokens=1,2,3* delims= " %%G in ('netsh interface show interface') DO (
