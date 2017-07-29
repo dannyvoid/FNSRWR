@@ -15,6 +15,7 @@ ipconfig /renew >NUL
 netsh int ip delete arpcache >NUL
 netsh int ip reset >NUL
 netsh winsock reset >NUL
+netsh winsock reset proxy >NUL
 
 for /F "skip=3 tokens=1,2,3* delims= " %%G in ('netsh interface show interface') DO (
     IF "%%H"=="Connected" netsh interface set interface "%%J" disabled
