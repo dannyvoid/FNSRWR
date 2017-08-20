@@ -7,7 +7,4 @@ Run 'reset_silent.bat' if you don't want to be bothered with a Y/N option or are
 You *don't* have to reboot your computer, router or modem.
 Just run the batch, and voila.
 
-**I haven't tested this on too many Windows machines, so YMMV.**
-
-
-*If your internet stops working after running this, please run 'undo.bat'*
+**If your internet stops working after running this, please run 'undo.bat'.**
