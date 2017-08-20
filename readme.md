@@ -10,4 +10,4 @@ Just run the batch, and voila.
 **I haven't tested this on too many Windows machines, so YMMV.**
 
 
-*** If your internet stops working after running this, please run 'undo.bat' ***
+*If your internet stops working after running this, please run 'undo.bat'*
