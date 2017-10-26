@@ -10,12 +10,12 @@ mshta "javascript: var shell = new ActiveXObject('shell.application'); shell.She
 exit
 
 :start
-ipconfig /release >NUL
-ipconfig /renew >NUL
-netsh int ip delete arpcache >NUL
-netsh int ip reset >NUL
-netsh winsock reset >NUL
-netsh winsock reset proxy >NUL
+ipconfig /release >nul
+ipconfig /renew >nul
+netsh int ip delete arpcache >nul
+netsh int ip reset >nul
+netsh winsock reset >nul
+netsh winsock reset proxy >nul
 
 for /F "skip=3 tokens=1,2,3* delims= " %%G in ('netsh interface show interface') DO (
     IF "%%H"=="Connected" netsh interface set interface "%%J" disabled
