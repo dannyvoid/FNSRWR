@@ -1,13 +1,13 @@
 @echo off
 
-NET SESSION >NUL
-IF %ERRORLEVEL% NEQ 0 GOTO ELEVATE >NUL
+net session >nul
+if %errorlevel% neq 0 goto elevate >nul
 goto :start
 
-:ELEVATE
-CD /d %~dp0
-MSHTA "javascript: var shell = new ActiveXObject('shell.application'); shell.ShellExecute('%~nx0', '', '', 'runas', 1);close();" >NUL
-EXIT
+:elevate
+cd /d %~dp0
+mshta "javascript: var shell = new ActiveXObject('shell.application'); shell.ShellExecute('%~nx0', '', '', 'runas', 1);close();" >nul
+exit
 
 :start
 for /F "skip=3 tokens=1,2,3* delims= " %%G in ('netsh interface show interface') DO (
