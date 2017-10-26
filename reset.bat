@@ -43,11 +43,11 @@ netsh winsock reset proxy >nul
 echo Resetting Network Adapter...
 for /F "skip=3 tokens=1,2,3* delims= " %%G in ('netsh interface show interface') DO (
     IF "%%H"=="Connected" netsh interface set interface "%%J" disabled
-) >NUL
+) >nul
 
 for /F "skip=3 tokens=1,2,3* delims= " %%G in ('netsh interface show interface') DO (
     IF "%%H"=="Disconnected" netsh interface set interface "%%J" enabled
-) >NUL
+) >nul
 goto :done
 
 :done
